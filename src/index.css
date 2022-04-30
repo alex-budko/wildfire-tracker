@@ -3,12 +3,14 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* modifies the google react map  */
 .map {
   width: 100vw;
   height: 100vh;
   position: relative;
 }
 
+/* modifies the location icon */
 .location-icon {
   font-size: 2rem;
   color: red;
