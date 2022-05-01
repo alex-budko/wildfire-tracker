@@ -3,7 +3,7 @@ import React from 'react';
 import LocationMarker from './LocationMarker'
 
 //const MY_KEY = process.env.REACT_APP_API_KEY;
-const Map = ({center, zoom}) => {
+const Map = ({eventData, center, zoom}) => {
   return (
     <div className="map">
         <GoogleMapReact
@@ -12,9 +12,8 @@ const Map = ({center, zoom}) => {
               key: 'AIzaSyDgK_ZTVZywZXSUvtPiPQjz5Wr7ORdiTHU', 
               language: 'en'
            }}
-            defaultCenter={this.props.center}
-            center={this.state.center}
-            defaultZoom={this.props.zoom}
+            defaultCenter={center}
+            defaultZoom={zoom}
         >
           <LocationMarker lat={center.lat} lng={center.lng} />
         </GoogleMapReact>

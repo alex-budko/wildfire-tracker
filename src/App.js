@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div>
-      <Map />
+      {!loading ? <Map eventData={eventData} /> : <h1>Loading</h1> }
     </div>
   );
 }
