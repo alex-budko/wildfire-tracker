@@ -10,12 +10,7 @@ const Map = ({eventData, center, zoom}) => {
 
   const markers = eventData.map(ev => {
     if (ev.categories[0].id === 8) {
-      return 
-      <LocationMarker 
-        lat={ev.geometries[0].coordinates[1]} 
-        lng={ev.geometries[0].coordinates[0]}
-        onClick={()=>setLocationInfo({id: ev.id, title: ev.title})}
-       />
+      return  <LocationMarker lat={ev.geometries[0].coordinates[1]} lng={ev.geometries[0].coordinates[0]} onClick={()=>setLocationInfo({id: ev.id, title: ev.title})}  />
     }
     return null
   })
@@ -38,6 +33,7 @@ const Map = ({eventData, center, zoom}) => {
   )
 }
 
+// default map props
 Map.defaultProps = {
   center: {lat: 40.73, lng: -73.93}, 
   zoom: 12
