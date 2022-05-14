@@ -1,4 +1,5 @@
 const LocationInfoBox = ({info}) => {
+  //gives event location info
   return (
     <div className="location-info">
         <h2>Event Location Info</h2>
